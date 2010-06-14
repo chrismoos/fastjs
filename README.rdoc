@@ -5,9 +5,8 @@ Web framework for Node.js.
 == Getting Started
 
   $ kiwi install haml
-  $ kiwi install fastjs
-  $ fastjs init helloworld
-  $ cd helloworld
+  $ git clone git://github.com/chrismoos/fastjs.git
+  $ cd fastjs
   $ ./fastjs
   
 == Dependencies
