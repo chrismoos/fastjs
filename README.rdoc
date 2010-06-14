@@ -1,4 +1,4 @@
-= FastJs
+= fastjs
 
 Web framework for Node.js.
 
