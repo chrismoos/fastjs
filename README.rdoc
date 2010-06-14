@@ -1,0 +1,70 @@
+= FastJs
+
+Web framework for Node.js.
+
+== Getting Started
+
+  $ kiwi install haml
+  $ kiwi install fastjs
+  $ fastjs init helloworld
+  $ cd helloworld
+  $ ./fastjs
+  
+== Dependencies
+  
+  node.js
+  haml-js
+
+== Directory Structure
+
+The directory structure is similar to rails:
+
+* app/(config/modules/views/)
+* lib
+* test
+
+== Routes
+
+The routes are configured in app/config/routes.js
+
+  exports.configure = function(router) {
+    router.route('^/$', 'main', 'index');
+  };
+  
+== Settings
+
+Various settings can be configured in app/config/settings.js
+
+  exports.configure = function(settings) {
+    settings['server.listenPort'] = 5000;
+    settings['server.listenAddress'] = '0.0.0.0';
+  };
+  
+== Module
+  
+  var log = require('fastjs/logger').getLogger('Main');
+
+  exports.index = function() {
+    log.info("This is my index method, rendering a HAML template.");
+    this.render_haml('index', {msg: 'Hello, World!'});
+  };
+
+== Return a view in a controller
+  
+  Views are searched in app/views/{module}/{action}
+
+  this.render_haml('index', {msg: 'Hello, World!'});
+  
+== Note on Patches/Pull Requests
+ 
+* Fork the project.
+* Make your feature addition or bug fix.
+* Add tests for it. This is important so I don't break it in a
+  future version unintentionally.
+* Commit, do not mess with rakefile, version, or history.
+  (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
+* Send me a pull request. Bonus points for topic branches.
+
+== Copyright
+
+Copyright (c) 2010 Chris Moos. See LICENSE for details.

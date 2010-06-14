@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+
+NODE_PATH="$NODE_PATH:`pwd`/lib/" node lib/fastjs.js
