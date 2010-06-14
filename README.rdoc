@@ -50,7 +50,7 @@ Various settings can be configured in app/config/settings.js
 
 == Return a view in a controller
   
-  Views are searched in app/views/{module}/{action}
+Views are searched in app/views/{module}/{action}
 
   this.render_haml('index', {msg: 'Hello, World!'});
   
